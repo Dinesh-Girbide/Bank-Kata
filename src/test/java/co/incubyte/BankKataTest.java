@@ -2,10 +2,14 @@ package co.incubyte;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.InOrder;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import org.junit.runner.RunWith;
+
+import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
 public class BankKataTest {
@@ -16,7 +20,8 @@ public class BankKataTest {
 
   @Before
   public void initialise() {
-    account = new Account();
+    TransactionRepository transactionRepository=new TransactionRepository();
+    account = new Account(transactionRepository);
   }
 
   @Test
@@ -26,5 +31,14 @@ public class BankKataTest {
     account.withdraw(100);
     account.deposit(500);
     account.printStatement();
+
+    InOrder inOrder = Mockito.inOrder(console);
+
+    inOrder.verify(console).printLine("DATE | AMOUNT  | BALANCE");
+    inOrder.verify(console).printLine("10/04/2021 | 500.00  | 1400.00");
+    inOrder.verify(console).printLine("02/04/2021 | -100.00  | 900.00");
+    inOrder.verify(console).printLine("01/04/2021 | 1000.00  | 1000.00");
+
+
   }
 }

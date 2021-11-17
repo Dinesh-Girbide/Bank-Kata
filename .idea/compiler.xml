@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Bank-Kata" target="1.5" />
+      <module name="Bank-Kata" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
