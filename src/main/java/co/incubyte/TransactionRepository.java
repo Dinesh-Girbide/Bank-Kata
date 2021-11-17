@@ -12,12 +12,13 @@ public class TransactionRepository {
 this.clock=clock;
 }
   public void addDeposite(int amount) {
-  Transaction depositTransaction=new Transaction(clock.todayAsString(),amount);
-  transactions.add(depositTransaction);
+  Transaction deposit=new Transaction(clock.todayAsString(),amount);
+  transactions.add(deposit);
   }
 
   public void addWithdrawal(int amount) {
-    throw new UnsupportedOperationException();
+    Transaction withdrawal=new Transaction(clock.todayAsString(),-amount);
+    transactions.add(withdrawal);
   }
 
   public List<Transaction> allTransactions() {
