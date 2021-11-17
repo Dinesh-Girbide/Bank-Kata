@@ -15,9 +15,10 @@ public class BankKataTest {
   Console console;
   private Account account;
 
+  @Mock Clock clock;
   @Before
   public void initialise() {
-    TransactionRepository transactionRepository = new TransactionRepository();
+    TransactionRepository transactionRepository = new TransactionRepository(clock);
     StatementPrinter statementPrinter = new StatementPrinter();
     account = new Account(transactionRepository, statementPrinter);
   }

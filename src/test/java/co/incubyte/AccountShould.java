@@ -42,7 +42,7 @@ public class AccountShould {
   @Test
   public void
   print_a_statement() {
-    List<Transaction> transactions = Arrays.asList((new Transaction()));
+    List<Transaction> transactions = Arrays.asList((new Transaction("12/05/2020",100)));
     given(transactionRepository.allTransactions()).willReturn(transactions);
     account.printStatement();
     verify(statementPrinter).print(transactions);
