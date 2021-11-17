@@ -15,7 +15,7 @@ public class TransactionRepositoryShould {
 
   @Mock
   Clock clock;
-  public static final String TODAY = "12/05/2020";
+  public static final String TODAY = "24/04/2020";
   private TransactionRepository transactionRepository;
 
   @Before
