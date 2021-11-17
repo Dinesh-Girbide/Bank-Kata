@@ -1,11 +1,19 @@
 package co.incubyte;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class TransactionRepository {
+  private final Clock clock;
+  private List<Transaction> transactions=new ArrayList<>();
 
+  public TransactionRepository(Clock clock){
+this.clock=clock;
+}
   public void addDeposite(int amount) {
-    throw new UnsupportedOperationException();
+  Transaction depositTransaction=new Transaction(clock.todayAsString(),amount);
+  transactions.add(depositTransaction);
   }
 
   public void addWithdrawal(int amount) {
@@ -13,6 +21,6 @@ public class TransactionRepository {
   }
 
   public List<Transaction> allTransactions() {
-    throw new UnsupportedOperationException();
+return Collections.unmodifiableList(transactions);
   }
 }
