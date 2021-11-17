@@ -2,14 +2,11 @@ package co.incubyte;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.InOrder;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.runners.MockitoJUnitRunner;
-
-import org.junit.runner.RunWith;
-
-import static org.mockito.Mockito.verify;
+import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
 public class BankKataTest {
@@ -20,8 +17,9 @@ public class BankKataTest {
 
   @Before
   public void initialise() {
-    TransactionRepository transactionRepository=new TransactionRepository();
-    account = new Account(transactionRepository);
+    TransactionRepository transactionRepository = new TransactionRepository();
+    StatementPrinter statementPrinter = new StatementPrinter();
+    account = new Account(transactionRepository, statementPrinter);
   }
 
   @Test
