@@ -19,7 +19,7 @@ public class BankKataTest {
   @Before
   public void initialise() {
     TransactionRepository transactionRepository = new TransactionRepository(clock);
-    StatementPrinter statementPrinter = new StatementPrinter();
+    StatementPrinter statementPrinter = new StatementPrinter(console);
     account = new Account(transactionRepository, statementPrinter);
   }
 
