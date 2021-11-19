@@ -30,7 +30,7 @@ public class StatementPrinterShould {
   public void
   always_print_the_header() {
     statementPrinter.print(NO_TRANSACTIONS);
-    verify(console).printLine("DATE | AMOUNT  | BALANCE");
+    verify(console).printLine("DATE | AMOUNT | BALANCE");
 
   }
 
@@ -45,10 +45,10 @@ public class StatementPrinterShould {
     statementPrinter.print(transactions);
     InOrder inOrder = Mockito.inOrder(console);
 
-    inOrder.verify(console).printLine("DATE | AMOUNT  | BALANCE");
-    inOrder.verify(console).printLine("10/04/2021 | 500.00  | 1400.00");
-    inOrder.verify(console).printLine("02/04/2021 | -100.00  | 900.00");
-    inOrder.verify(console).printLine("01/04/2021 | 1000.00  | 1000.00");
+    inOrder.verify(console).printLine("DATE | AMOUNT | BALANCE");
+    inOrder.verify(console).printLine("10/04/2021 | 500.00 | 1400.00");
+    inOrder.verify(console).printLine("02/04/2021 | -100.00 | 900.00");
+    inOrder.verify(console).printLine("01/04/2021 | 1000.00 | 1000.00");
 
 
   }

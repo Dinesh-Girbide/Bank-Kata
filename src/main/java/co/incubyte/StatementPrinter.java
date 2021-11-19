@@ -10,7 +10,7 @@ public class StatementPrinter {
 
   private Console console;
   private DecimalFormat decimalFormatter = new DecimalFormat("#.00");
-  private static final String STATEMENT_HEADER = "DATE | AMOUNT  | BALANCE";
+  private static final String STATEMENT_HEADER = "DATE | AMOUNT | BALANCE";
 
   public StatementPrinter(Console console) {
     this.console = console;
