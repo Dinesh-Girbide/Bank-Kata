@@ -13,15 +13,3 @@ f
 6.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml,d\f\df4d02cb554f878acf5c0ba8e1f4d6f0831d4813
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-V
-&src/main/java/co/incubyte/Console.java,9\0\90645d93449e42123bdea8dd4a94c58d3f1b0d14
-d
-4src/main/java/co/incubyte/TransactionRepository.java,f\a\faaacc1885914d4b52426cfae8e584915a0a2c2b
-T
-$src/main/java/co/incubyte/Clock.java,c\9\c97d9c8221b7658b11553cbe24570beb927c050e
-V
-&src/main/java/co/incubyte/Account.java,5\e\5e0269abbc4483af38dc142b940228d40861698f
-j
-:src/test/java/co/incubyte/TransactionRepositoryShould.java,d\f\dfeb12211bcc4fd4c09691f0e7e4ba2d0ca920d2
-\
-,src/test/java/co/incubyte/AccountShould.java,6\1\61737c5812fee58f919f181f4a213ab3c4a461ee

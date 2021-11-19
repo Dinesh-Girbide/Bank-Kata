@@ -35,5 +35,4 @@ public class StatementPrinter {
         + decimalFormatter.format(transaction.amount()) + " | "
         + decimalFormatter.format(runningBalance.addAndGet(transaction.amount()));
   }
-
 }
