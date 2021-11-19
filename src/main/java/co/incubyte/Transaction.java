@@ -3,11 +3,21 @@ package co.incubyte;
 import java.util.Objects;
 
 public class Transaction {
-private final String date;
-private final int amount;
+
+  private final String date;
+  private final int amount;
+
+  public int amount() {
+    return amount;
+  }
+
+  public String date() {
+    return date;
+  }
+
   public Transaction(String date, int amount) {
-    this.date=date;
-    this.amount=amount;
+    this.date = date;
+    this.amount = amount;
   }
 
   @Override
