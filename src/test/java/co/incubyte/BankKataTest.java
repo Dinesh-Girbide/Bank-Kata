@@ -1,5 +1,7 @@
 package co.incubyte;
 
+import static org.mockito.BDDMockito.given;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,6 +28,7 @@ public class BankKataTest {
   @Test
   public void
   print_statement_containing_all_transaction() {
+    given(clock.todayAsString()).willReturn("01/04/2021","02/04/2021","10/04/2021");
     account.deposit(1000);
     account.withdraw(100);
     account.deposit(500);
