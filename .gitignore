@@ -1,0 +1,21 @@
+# Maven build output
+target/
+*.class
+
+# Environment / secrets
+.env
+.env.*
+\!.env.example
+*.pem
+*.key
+*.p12
+*.jks
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
